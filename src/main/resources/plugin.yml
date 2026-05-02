@@ -1,0 +1,24 @@
+name: golemguard
+version: '${version}'
+
+main: com.golemguard.GolemGuard
+api-version: '1.21.11'
+load: POSTWORLD
+
+description: Restricts iron golem farm spawning to admin-approved zones only.
+author: Elysium
+
+commands:
+  golemzone:
+    description: Manage iron golem spawn zones
+    usage: |
+      /<command>            — Set a zone at your location
+      /<command> remove     — Remove the nearest zone to you
+      /<command> list       — List all active zones
+    permission: golemguard.zone
+
+permissions:
+  golemguard.zone:
+    description: Allows managing iron golem spawn zones
+    default: op
+
