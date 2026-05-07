@@ -45,18 +45,18 @@ public class GolemZoneCommand implements CommandExecutor, TabCompleter {
 
         switch (args[0].toLowerCase()) {
             case "remove" -> handleRemove(player);
-            case "list"   -> handleList(player);
-            default       -> sendUsage(player);
+            case "list" -> handleList(player);
+            default -> sendUsage(player);
         }
 
         return true;
     }
 
     private void handleSet(Player player) {
-        Location loc     = player.getLocation();
+        Location loc = player.getLocation();
         String worldName = loc.getWorld().getName();
-        int    centerX   = loc.getBlockX();
-        int    centerZ   = loc.getBlockZ();
+        int centerX = loc.getBlockX();
+        int centerZ = loc.getBlockZ();
 
         GolemZone zone = new GolemZone(worldName, centerX, centerZ, DEFAULT_RADIUS);
 
