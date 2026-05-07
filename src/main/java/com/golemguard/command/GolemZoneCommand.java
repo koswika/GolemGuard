@@ -15,8 +15,8 @@ import java.util.Optional;
 
 public class GolemZoneCommand implements CommandExecutor, TabCompleter {
 
-    private static final String PERMISSION   = "golemguard.zone";
-    private static final int    DEFAULT_RADIUS = 70;
+    private static final String PERMISSION = "golemguard.zone";
+    private static final int DEFAULT_RADIUS = 70;
 
     private final ZoneManager zoneManager;
 
